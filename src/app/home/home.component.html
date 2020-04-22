@@ -1,0 +1,33 @@
+<h1>NodeJs Quiz!</h1>
+
+<form [formGroup]="infoForm" (ngSubmit)="onFormSubmit(infoForm.value);">
+    <!--right answer http module-->
+    <p>Which of the following module is required to create a web server?</p>
+    <input type="radio" id="url" name="question1" value="url module" formControlName="question1">
+    <label for="url">url module</label><br>
+    <input type="radio" id="net" name="question1" value="net module" formControlName="question1">
+    <label for="net">net module</label><br>
+    <input type="radio" id="http" name="question1" value="http module" formControlName="question1">
+    <label for="http">http module</label><br>
+    <input type="radio" id="web" name="question1" value="web module" formControlName="question1">
+    <label for="web">web module</label><br>
+    <input type="radio" id="node" name="question1" value="node module" formControlName="question1">
+    <label for="node">node module</label>
+  
+    <br>  
+  
+    <!--right answer path module-->
+    <p>Which of the following module is required for path specific operations?</p>
+    <input type="radio" id="os" name="question2" value="os module" formControlName="question2">
+    <label for="os">os module</label><br>
+    <input type="radio" id="operation" name="question2" value="operation module" formControlName="question2">
+    <label for="operation">operation module</label><br>
+    <input type="radio" id="fs" name="question2" value="fs module" formControlName="question2">
+    <label for="fs">fs module</label><br>  
+    <input type="radio" id="path" name="question2" value="path module" formControlName="question2">
+    <label for="path">path module</label><br>
+    <input type="radio" id="None" name="question2" value="None of the above" formControlName="question2">
+    <label for="None">None of the above</label><br><br>
+    <input type="submit" value="Submit"><br> <br>
+    <input type="button" value="Clear" (click)="reset();">
+</form>
