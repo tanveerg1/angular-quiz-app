@@ -8,11 +8,13 @@ import { ApiService } from './api.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { Info } from './info';
+import { StartComponent } from './start/start.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    StartComponent
   ],
   imports: [
     BrowserModule,
