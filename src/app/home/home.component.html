@@ -1,126 +1,13 @@
 <h1>NodeJs Quiz!</h1>
 
 <h2>Timer: {{subscribeTime}}</h2>
-<form [formGroup]="infoForm" (ngSubmit)="onFormSubmit(infoForm.value);">
-    <!--right answer http module-->
-    <p>Which of the following module is required to create a web server?</p>
-    <input type="radio" id="url" name="question1" value="url module" formControlName="question1">
-    <label for="url">url module</label><br>
-    <input type="radio" id="net" name="question1" value="net module" formControlName="question1">
-    <label for="net">net module</label><br>
-    <input type="radio" id="http" name="question1" value="http module" formControlName="question1">
-    <label for="http">http module</label><br>
-    <input type="radio" id="web" name="question1" value="web module" formControlName="question1">
-    <label for="web">web module</label><br>
-    <input type="radio" id="node" name="question1" value="node module" formControlName="question1">
-    <label for="node">node module</label>
-  
-    <br>  
-  
-    <!--right answer path module-->
-    <p>Which of the following module is required for path specific operations?</p>
-    <input type="radio" id="os" name="question2" value="os module" formControlName="question2">
-    <label for="os">os module</label><br>
-    <input type="radio" id="operation" name="question2" value="operation module" formControlName="question2">
-    <label for="operation">operation module</label><br>
-    <input type="radio" id="fs" name="question2" value="fs module" formControlName="question2">
-    <label for="fs">fs module</label><br>  
-    <input type="radio" id="path" name="question2" value="path module" formControlName="question2">
-    <label for="path">path module</label><br>
-    <input type="radio" id="None" name="question2" value="None of the above" formControlName="question2">
-    <label for="None">None of the above</label><br>
+<!-- 
+<input type="button" value="Next" [routerLink]="['page2']" (click)="togglePage1();">
+<input type="button" value="Back" [routerLink]="['page1']" (click)="togglePage2();">
 
-    <!--right answer Being built on Google Chrome's V8 JavaScript Engine-->
-    <p>Why code written in Node.JS is pretty fast although being written in JavaScript?</p>
-    <input type="radio" id="nodejs" name="question3" value="Node.JS internally converts JavaScript code to Java based code and then execute the same" formControlName="question3">
-    <label for="nodejs">Node.JS internally converts JavaScript code to Java based code and then execute the same</label><br>
-    <input type="radio" id="convert" name="question3" value=">Node.JS internally converts JavaScript code to C based code and then execute the same" formControlName="question3">
-    <label for="convert">Node.JS internally converts JavaScript code to C based code and then execute the same</label><br>
-    <input type="radio" id="google" name="question3" value="Being built on Google Chrome's V8 JavaScript Engine" formControlName="question3">
-    <label for="google">Being built on Google Chrome's V8 JavaScript Engine</label><br>  
-    <input type="radio" id="opera" name="question3" value="Being built on Opera JavaScript Engine" formControlName="question3">
-    <label for="opera">Being built on Opera JavaScript Engine</label><br>
-    <input type="radio" id="above" name="question3" value="None of the above" formControlName="question3">
-    <label for="above">None of the above</label><br>
+<router-outlet *ngIf="showPage1||showPage2"></router-outlet>
 
-    <!--right answer true -->
-    <p>By default, npm installs any dependency in the local mode.</p>
-    <input type="radio" id="true" name="question4" value="true" formControlName="question4">
-    <label for="true">true</label><br>
-    <input type="radio" id="false" name="question4" value="false" formControlName="question4">
-    <label for="false">false</label><br>
+<input type="button" value="Next" [routerLink]="['page2']" (click)="togglePage1();">
+<input type="button" value="Back" [routerLink]="['page1']" (click)="togglePage2();">-->
 
-    <!--right answer Both of the above-->
-    <p>Which of the following is true about writable stream?</p>
-    <input type="radio" id="write" name="question5" value="writable stream is used for write operation" formControlName="question5">
-    <label for="write">writable stream is used for write operation.</label><br>
-    <input type="radio" id="output" name="question5" value="Output of readable stream can be input to a writable stream" formControlName="question5">
-    <label for="output">Output of readable stream can be input to a writable stream</label><br>
-    <input type="radio" id="both" name="question5" value="Both of the above" formControlName="question5">
-    <label for="both">Both of the above</label><br>  
-    <input type="radio" id="p" name="question5" value="path module" formControlName="question5">
-    <label for="p">path module</label><br>
-    <input type="radio" id="5" name="question5" value="None of the above" formControlName="question5">
-    <label for="5">None of the above</label><br>
-    
-    <!--right answer fs.open(path, flags[, mode], callback)-->
-    <p>Which method of fs module is used to open a file?</p>
-    <input type="radio" id="open" name="question6" value="fs.open(path, flags[, mode], callback)" formControlName="question6">
-    <label for="open">fs.open(path, flags[, mode], callback)</label><br>
-    <input type="radio" id="file" name="question6" value="fs.openFile(path, flags[, mode], callback)" formControlName="question6">
-    <label for="file">fs.openFile(path, flags[, mode], callback)</label><br>
-    <input type="radio" id="b" name="question6" value="Both of the above" formControlName="question6">
-    <label for="b">Both of the above</label><br>  
-    <input type="radio" id="pa" name="question6" value="fs.openPath(path, flags[, mode], callback)" formControlName="question6">
-    <label for="pa">fs.openPath(path, flags[, mode], callback)</label><br>
-    <input type="radio" id="of" name="question6" value="None of the above" formControlName="question6">
-    <label for="of">None of the above</label><br>
-
-    <!--right answer The __dirname represents the name of the directory that the currently executing script resides in.-->
-    <p>Which of the following is true about __dirname global object?</p>
-    <input type="radio" id="dir" name="question7" value="The __dirname represents the name of the directory that the currently executing script resides in" formControlName="question7">
-    <label for="dir">The __dirname represents the name of the directory that the currently executing script resides in.</label><br>
-    <input type="radio" id="r" name="question7" value="The __dirname represents the resolved absolute path of code file" formControlName="question7">
-    <label for="r">The __dirname represents the resolved absolute path of code file</label><br>
-    <input type="radio" id="ab" name="question7" value="Both of the above" formControlName="question7">
-    <label for="ab">Both of the above</label><br>  
-    <input type="radio" id="oft" name="question7" value="None of the above" formControlName="question7">
-    <label for="oft">None of the above</label><br>
-
-    <!--right answer console.log('endianness : ' + os.endianness());-->
-    <p>Which of the following code print the endianness of operating system?</p>
-    <input type="radio" id="co" name="question8" value="console.log('endianness : ' + os.endianness);" formControlName="question8">
-    <label for="co">console.log('endianness : ' + os.endianness);</label><br>
-    <input type="radio" id="lo" name="question8" value="console.log('endianness : ' + os.endianness());" formControlName="question8">
-    <label for="lo">console.log('endianness : ' + os.endianness());</label><br>
-    <input type="radio" id="abc" name="question8" value="console.log('endianness : ' + os.getEndianness());" formControlName="question8">
-    <label for="abc">console.log('endianness : ' + os.getEndianness());</label><br>  
-    <input type="radio" id="ofth" name="question8" value="None of the above" formControlName="question8">
-    <label for="ofth">None of the above</label><br>
-
-    <!--right answer Both of the above-->
-    <p>Which of the following stands true for dns.lookup(hostname[, options], callback) method?</p>
-    <input type="radio" id="reso" name="question9" value="Resolves a hostname (e.g. 'google.com') into the first found A (IPv4) or AAAA (IPv6) record" formControlName="question9">
-    <label for="reso">Resolves a hostname (e.g. 'google.com') into the first found A (IPv4) or AAAA (IPv6) record</label><br>
-    <input type="radio" id="if" name="question9" value="If options is not provided, then IP v4 and v6 addresses are both valid. If options is an integer, then it must be 4 or 6" formControlName="question9">
-    <label for="if">If options is not provided, then IP v4 and v6 addresses are both valid. If options is an integer, then it must be 4 or 6</label><br>
-    <input type="radio" id="abcd" name="question9" value="Both of the above" formControlName="question9">
-    <label for="abcd">Both of the above</label><br>  
-    <input type="radio" id="ofthe" name="question9" value="None of the above" formControlName="question9">
-    <label for="ofthe">None of the above</label><br>
-
-    <!--right answer Both of the above-->
-    <p>Which of the following is true about RESTful webservices?</p>
-    <input type="radio" id="web" name="question10" value="Webservices based on REST Architecture are known as RESTful web services." formControlName="question10">
-    <label for="web">Webservices based on REST Architecture are known as RESTful web services.</label><br>
-    <input type="radio" id="ht" name="question10" value="Webservices uses HTTP methods to implement the concept of REST architecture" formControlName="question10">
-    <label for="ht">Webservices uses HTTP methods to implement the concept of REST architecture</label><br>
-    <input type="radio" id="abcde" name="question10" value="Both of the above" formControlName="question10">
-    <label for="abcde">Both of the above</label><br>  
-    <input type="radio" id="ofthea" name="question10" value="None of the above" formControlName="question10">
-    <label for="ofthea">None of the above</label><br><br>
-
-    <input type="submit" value="Submit"><br> <br>
-    <input type="button" value="Clear" (click)="reset();">
-
-</form>
+<router-outlet></router-outlet>

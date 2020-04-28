@@ -1,0 +1,128 @@
+<h2>Page 2</h2>
+
+<form [formGroup]="testForm">
+
+    <!--right answer http module-->
+    <p>Buffer class is a global class and can be accessed in application without importing buffer module.</p>
+    <input type="radio" id="true" name="question11" value="true" formControlName="question11">
+    <label for="true">true</label><br>
+    <input type="radio" id="false" name="question11" value="false" formControlName="question11">
+    <label for="false">false</label><br>
+  
+    <br>  
+
+    <p>Which of the following code converts a buffer buf to JSON object?</p>
+    <input type="radio" id="buf" name="question12" value="buf.length" formControlName="question12">
+    <label for="buf">buf.length</label><br>
+    <input type="radio" id="size" name="question12" value="buf.size" formControlName="question12">
+    <label for="size">buf.size</label><br>
+    <input type="radio" id="length" name="question12" value="buf.length()" formControlName="question12">
+    <label for="length">buf.length()</label><br>
+    <input type="radio" id="w" name="question12" value="buf.size()" formControlName="question12">
+    <label for="w">buf.size()</label><br>
+    <input type="radio" id="noneof" name="question12" value="None of the above" formControlName="question12">
+    <label for="noneof">None of the above</label>
+  
+    <br> 
+
+    <p>Which of the following statement is valid to use a Node module fs in a Node based application?</p>
+    <input type="radio" id="var" name="question13" value="var fs = require('fs');" formControlName="question13">
+    <label for="var">var fs = require("fs");</label><br>
+    <input type="radio" id="fsim" name="question13" value="var fs = import('fs');" formControlName="question13">
+    <label for="fsim">var fs = import("fs");</label><br>
+    <input type="radio" id="package" name="question13" value="package fs;" formControlName="question13">
+    <label for="package">package fs;</label><br>
+    <input type="radio" id="imf" name="question13" value="import fs;" formControlName="question13">
+    <label for="imf">import fs;</label><br>
+    <input type="radio" id="noneoft" name="question13" value="None of the above" formControlName="question13">
+    <label for="noneoft">None of the above</label>
+  
+    <br> 
+
+    <p>Which method of fs module is used to open a file?</p>
+    <input type="radio" id="open" name="question14" value="fs.open(path, flags[, mode], callback)" formControlName="question14">
+    <label for="open">fs.open(path, flags[, mode], callback)</label><br>
+    <input type="radio" id="openfile" name="question14" value="fs.openFile(path, flags[, mode], callback)" formControlName="question14">
+    <label for="openfile">fs.openFile(path, flags[, mode], callback)</label><br>
+    <input type="radio" id="openPath" name="question14" value="fs.openPath(path, flags[, mode], callback)" formControlName="question14">
+    <label for="openPath">fs.openPath(path, flags[, mode], callback)</label><br>
+    <input type="radio" id="noneofth" name="question14" value="None of the above" formControlName="question14">
+    <label for="noneofth">None of the above</label>
+  
+    <br> 
+
+    <p>Which method of fs module is used to get information about file?</p>
+    <input type="radio" id="openp" name="question15" value="fs.open(path, flags[, mode], callback)" formControlName="question15">
+    <label for="openp">fs.open(path, flags[, mode], callback)</label><br>
+    <input type="radio" id="stat" name="question15" value="fs.stat(path, callback)" formControlName="question15">
+    <label for="stat">fs.stat(path, callback)</label><br>
+    <input type="radio" id="readFile" name="question15" value="fs.readFile(path, flags[, mode], callback)" formControlName="question15">
+    <label for="readFile">fs.readFile(path, flags[, mode], callback)</label><br>
+    <input type="radio" id="noneofthe" name="question15" value="None of the above" formControlName="question15">
+    <label for="noneofthe">None of the above</label>
+  
+    <br> 
+
+    <p>Which method of fs module is used to close a file?</p>
+    <input type="radio" id="close" name="question16" value="fs.close(fd, callback)" formControlName="question16">
+    <label for="close">fs.close(fd, callback)</label><br>
+    <input type="radio" id="closeFile" name="question16" value="fs.closeFile(fd, callback)" formControlName="question16">
+    <label for="closeFile">fs.closeFile(fd, callback)</label><br>
+    <input type="radio" id="closePath" name="question16" value="fs.closePath(fd, callback)" formControlName="question16">
+    <label for="closePath">fs.closePath(fd, callback)</label><br>
+    <input type="radio" id="noneofthea" name="question16" value="None of the above" formControlName="question16">
+    <label for="noneofthea">None of the above</label>
+  
+    <br> 
+
+    <p>Which method of fs module is used to write a file?</p>
+    <input type="radio" id="write" name="question17" value="fs.write(path, flags[, mode], callback)" formControlName="question17">
+    <label for="write">fs.write(path, flags[, mode], callback)</label><br>
+    <input type="radio" id="writeFile" name="question17" value="fs.writeFile(path, flags[, mode], callback)" formControlName="question17">
+    <label for="writeFile">fs.writeFile(path, flags[, mode], callback)</label><br>
+    <input type="radio" id="writePath" name="question17" value="fs.writePath(path, flags[, mode], callback)" formControlName="question17">
+    <label for="writePath">fs.writePath(path, flags[, mode], callback)</label><br>
+    <input type="radio" id="noneoftheab" name="question17" value="None of the above" formControlName="question17">
+    <label for="noneoftheab">None of the above</label>
+  
+    <br>
+    
+    <p>Which method of fs module is used to truncate a file?</p>
+    <input type="radio" id="delete" name="question18" value="fs.delete(fd, len, callback)" formControlName="question18">
+    <label for="delete">fs.delete(fd, len, callback)</label><br>
+    <input type="radio" id="remove" name="question18" value="fs.remove(fd, len, callback)" formControlName="question18">
+    <label for="remove">fs.remove(fd, len, callback)</label><br>
+    <input type="radio" id="ftruncate" name="question18" value="fs.ftruncate(fd, len, callback)" formControlName="question18">
+    <label for="ftruncate">fs.ftruncate(fd, len, callback)</label><br>
+    <input type="radio" id="noneoftheabo" name="question18" value="None of the above" formControlName="question18">
+    <label for="noneoftheabo">None of the above</label>
+  
+    <br> 
+
+    <p>Which method of fs module is used to delete a file?</p>
+    <input type="radio" id="deleted" name="question19" value="fs.delete(fd, len, callback)" formControlName="question19">
+    <label for="delete">fs.delete(fd, len, callback)</label><br>
+    <input type="radio" id="removed" name="question19" value="fs.remove(fd, len, callback)" formControlName="question19">
+    <label for="remove">fs.remove(fd, len, callback)</label><br>
+    <input type="radio" id="unlink" name="question19" value="fs.unlink(path, callback)" formControlName="question19">
+    <label for="unlink">fs.unlink(path, callback)</label><br>
+    <input type="radio" id="noneoftheabov" name="question19" value="None of the above" formControlName="question19">
+    <label for="noneoftheabov">None of the above</label>
+  
+    <br> 
+
+    <p>Which method of fs module is used to read a directory?</p>
+    <input type="radio" id="readDirectory" name="question20" value="fs.readDirectory(path[, mode], callback)" formControlName="question20">
+    <label for="readDirectory">fs.readDirectory(path[, mode], callback)</label><br>
+    <input type="radio" id="readPa" name="question20" value="fs.read(path[, mode], callback)" formControlName="question20">
+    <label for="readPa">fs.read(path[, mode], callback)</label><br>
+    <input type="radio" id="readdir" name="question20" value="fs.readdir(path, callback)" formControlName="question20">
+    <label for="readdir">fs.readdir(path, callback)</label><br>
+    <input type="radio" id="noneoftheabove" name="question20" value="None of the above" formControlName="question20">
+    <label for="noneoftheabove">None of the above</label>
+
+
+    <br><br>
+    <input type="button" value="Previous" (click)="goToPrevious(testForm.value)"><br><br>
+    <input type="button" value="Next" (click)="goToNext(testForm.value)"> 
+</form>

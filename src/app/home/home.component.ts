@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FormControl, FormGroupDirective, FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { timer } from 'rxjs';
+import { Router } from '@angular/router';
 import { ApiService } from '../api.service';
-import { Info } from '../info';
 
 @Component({
   selector: 'app-home',
@@ -10,6 +10,8 @@ import { Info } from '../info';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+
+  @Input() formData;
 
   //info = new Info();
   timeLeft: number = 120;
@@ -28,27 +30,22 @@ export class HomeComponent implements OnInit {
   question9: String;
   question10: String;
 
+  showPage1:boolean = true;
+  showPage2:boolean = false;
+
   // infoForm = new FormGroup({
   //   question1: new FormControl(),
   //   question2: new FormControl()
   // });
 
-  constructor(private api: ApiService, private formBuilder: FormBuilder) { }
+  constructor(private api: ApiService, private formBuilder: FormBuilder, private router: Router) { }
 
   ngOnInit(){
-    this.infoForm = this.formBuilder.group({
-      'question1': [''],
-      'question2': [''],
-      'question3': [''],
-      'question4': [''],
-      'question5': [''],
-      'question6': [''],
-      'question7': [''],
-      'question8': [''],
-      'question9': [''],
-      'question10': [''],
-    });
 
+    this.router.navigate(['home/page1']);
+
+    this.formData = this.api.getFormData();
+    
     const source = timer(1000, 2000);
     this.subscription = source.subscribe(val => {
       console.log(val);
@@ -56,6 +53,16 @@ export class HomeComponent implements OnInit {
       
     });
 
+  }
+
+  togglePage1() {
+    this.showPage1 = true;
+    this.showPage2 = false;
+  }
+
+  togglePage2() {
+    this.showPage2 = true;
+    this.showPage1 = false;
   }
 
   onFormSubmit(form: NgForm){

@@ -41,6 +41,46 @@ const infoSchema = new mongoose.Schema({
         type: String,
         default: 'Not Selected'
     },
+    question11: {
+        type: String,
+        default: 'Not Selected'
+    },
+    question12: {
+        type: String,
+        default: 'Not Selected'
+    },
+    question13: {
+        type: String,
+        default: 'Not Selected'
+    },
+    question14: {
+        type: String,
+        default: 'Not Selected'
+    },
+    question15: {
+        type: String,
+        default: 'Not Selected'
+    },
+    question16: {
+        type: String,
+        default: 'Not Selected'
+    },
+    question17: {
+        type: String,
+        default: 'Not Selected'
+    },
+    question18: {
+        type: String,
+        default: 'Not Selected'
+    },
+    question19: {
+        type: String,
+        default: 'Not Selected'
+    },
+    question20: {
+        type: String,
+        default: 'Not Selected'
+    }
 });
 
 module.exports = mongoose.model('Info', infoSchema);

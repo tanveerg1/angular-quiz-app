@@ -7,14 +7,20 @@ import { HomeComponent } from './home/home.component';
 import { ApiService } from './api.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { Info } from './info';
+import { infoDetails } from './info';
 import { StartComponent } from './start/start.component';
+import { TestComponent } from './home/test/test.component';
+import { Test2Component } from './home/test2/test2.component';
+import { CompleteComponent } from './home/complete/complete.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    StartComponent
+    StartComponent,
+    TestComponent,
+    Test2Component,
+    CompleteComponent
   ],
   imports: [
     BrowserModule,
